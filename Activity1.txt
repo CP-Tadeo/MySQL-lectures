@@ -1,0 +1,39 @@
+//csci 112
+//194796
+
+//item 1 
+use twice_kpop 
+
+//item 2 
+//source: kprofiles
+db.members.insertMany([
+{"name":"Nayeon", "age":28,"position":["Lead Vocalist", "Lead Dancer", "Center", "Face of the Group"]}, 
+{"name":"Jihyu", "age":26,"position":["Leader","Main Vocalist"]},
+{"name":"Jeongyeon", "age":27,"position":"Lead Vocalist"},
+{"name":"Momo", "age":26,"position":["Main Dancer","Sub Vocalist","Sub Rapper"]},
+{"name":"Sana", "age":26,"position":"Sub Vocalist"},
+{"name":"Mina", "age":26,"position":["Main Dancer","Sub Vocalist"]},
+{"name":"Dahyun", "age":25,"position":["Lead Rapper","Sub Vocalist"]},
+{"name":"Chaeyoung", "age":24,"position":["Lead Rapper","Sub Vocalist"]},
+{"name":"Tzuyu", "age":24,"position":["Lead Rapper","Sub Vocalist","Visual","Maknae"]},
+])
+db.members.find()
+//item 3 as of 9/28/23
+//source: Spotify
+//source: kworb
+db.top_songs.insertMany([
+  {"song title":"FANCY", "Streams count":422288653,"Album":"Fancy You","Year":2019,"Written By":["Eyed Pilseung Black","Jeon Goon"],"Produced By":"J.Y. Park"},
+  {"song title":"What is Love", "Streams count":379224985,"Album":"Summer Nights","Year":2018,"Written By":"J.Y. Park","Produced By":"J.Y. Park"},
+  {"song title":"The Feels", "Streams count":364133446,"Album":"Formula of Love: O+T=<3","Year":2021,"Written By":["Boy Matthews","Anna Timgren","Justin Reinstein","Woo Min Lee collapsedone"],"Produced By":["Woo Min Lee collapsedone","Justin Reinstein"]},
+  {"song title":"I CAN'T STOP ME", "Streams count":342085871,"Album":"Eyes Wide Open","Year":2020,"Written By":["Melanie Joy Fontana","A Wright","J.Y. Park","Micel 'Lindren' Schulz", "Sim Eun Jee"],"Produced By":"Lindgren"},
+  {"song title":"Feel Special", "Streams count":322723006,"Album":"Feel Special","Year":2019,"Written By":["J.Y. Park","Haylet Aitken","Min Lee 'collapsedone'","Ollipop"],"Produced By":"J.Y. Park"},
+
+  ])
+//db.members.find()
+//db.top_songs.find()
+//item 4
+db.members.updateMany({},{$inc:{age:-1}})
+//db.members.find()
+//item 5
+db.members.deleteOne({name:"Chaeyoung"})
+//db.members.find()
